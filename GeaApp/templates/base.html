@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEA - Escuela Generativa Ecológica Ambiental</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'GeaApp/css/style.css' %}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Indie+Flower&family=Lato&family=Quicksand:wght@300;400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="container-fluid" style="position: relative;">
+  <header class="row justify-content-around">
+    <nav class="navbar navbar-expand-lg navbar-light" style="width: 90%;">
+      <div id="logo" style="width: 255px;">
+        <a class="navbar-brand" href="{% url 'index' %}">
+          <img src="{% static 'GeaApp/img/logo.png' %}" alt="Logo" style="height: auto; margin-right: 1em; max-width: 350px;">
+        </a>
+      </div>  
+      <div id="machete" style="text-align: start; display: inline-block;margin-right: 5vw;">
+        <h1 class="letra-informal2" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);font-size: 64px; padding-top: 20px; color: rgb(3, 84, 131); padding-top:28px; margin: 0; height: 93px; letter-spacing: 2px;">
+          <span style="color: #015fa7;">G</span ><span style="color: #95c416;">E</span ><span style="color: #de672a;">A</span>
+        </h1>
+        <h2 style="font-size: 18px; padding: 0; font-weight: 600; margin-top: 0; height: 40px; padding-left: 4px;">
+          Escuela Ecológica Ambiental
+        </h2>
+      </div>
+      
+      
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="margin-right: 10vw; margin-left: 5vw;">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link link1" href="{% url 'index' %}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link2" href="#">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link4" href="#">La Radio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link5" href="#">Algo mas</a>
+          </li>
+          <li class="nav-item">
+            <a href="#formulario" class="nav-link link3">Contacto</a>
+
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main style="margin: 0; padding: 0;">
+    {% block content %}
+
+    {% endblock %}
+  </main>
+
+  <footer class="row justify-content-center align-items-center" style="background-color: rgb(12, 87, 117);">
+
+    <div class="col-lg-3 col-md-12 align-self-start text-center" style="color: white;">
+      <div class="mb-2 align-items-start" style="padding-bottom: 3em;">
+        <img src="static\GeaApp\img\logo.png" alt="Logo" style="max-width: 91%; height: auto;">
+        <h6 style="font-size: 18px;">Escuela Generativa Ecológica Ambiental</h6>
+        <h6 style="font-size: 12px;">Tel: 02657-353612</h6>
+        <h6 style="font-size: 12px;">Maipú 1712</h6>
+        <h6 style="font-size: 12px;">escuelagenerativagea@gmail.com</h6>
+      </div>
+    </div>
+
+    <div id="hola" class="col-lg-1 col-md-12 pt-4" style="width: 3em; margin: 0;">
+      <div class="d-flex align-items-center">
+        <a href="https://www.facebook.com/Escuelagenerativa/" target="_blank"><img class="redes-ico" src="static\GeaApp\img\redes\facebook.png" alt="Facebook"
+            class="mb-4-mio"></a>
+        <a href="https://www.instagram.com/escuelagenerativagea/?hl=es" target="_blank"><img class="redes-ico" src="static\GeaApp\img\redes\instagram.png" alt="Instagram"
+            class="mb-4-mio"></a>
+        <a href="#" target="_blank"><img class="redes-ico" src="static\GeaApp\img\redes\twitter.png" alt="Twitter"
+            class="mb-4-mio"></a>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-xl-3 col-xxl-3 col-md-12 col-sm-12 col-xs-12 pt-4" style="margin-left: 2em;">
+      
+        <div id="mapa" style="padding: 2em; padding-top: 0; height: auto; margin: auto; width: 100%;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1660.0059384893405!2d-65.42780716761641!3d-33.68275663926707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d16bb724907b73%3A0x947adcc9bda68792!2sEscuela%20Generativa%20GEA!5e0!3m2!1ses-419!2sar!4v1680103712704!5m2!1ses-419!2sar"
+            width="100%" height="370" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      
+    </div>
+
+    <div class="row text-center mt-3">
+      <div class="col-12" style="color: white;">
+        <p style="font-size: 11px;">© 2023 GEA - Escuela Generativa Ecológica Ambiental. Todos los derechos reservados.
+      </div>
+  </footer>
+
+
+  <div class="blur"></div>
+  <div class="form-popup">
+    <span class="close">&times;</span>
+    <div class="form-wrapper">
+      <div class="image-column">
+        <img src="{% static 'GeaApp/img/logo.png' %}" alt="Imagen de ejemplo"> 
+      </div>
+      <div class="form-column">
+        <br><br>
+        <form action="#" method="post">
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+          <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="5" required maxlength="500"
+            style="resize: none; height: 250px;"></textarea>
+          <br><br>
+          <div class="button-wrapper">
+            <button type="submit">Enviar!</button>
+          </div>
+        </form>
+        <br><br>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script type="text/javascript" src="{% static 'GeaApp/js/script.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+    integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
