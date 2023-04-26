@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div>
+
+
+    {% for post in posts %}
+    <section class="blog">
+        <div class="blog-container">
+            <div class="blog-imagen"><img src="{{post.imagen.url}}" alt="imagen"></div>
+            <div class="blog-texto">
+                <p class="blog-fecha">{{post.created}}</p>
+                <a href="">
+                    <h4>{{post.titulo}}</h4>
+                </a>
+                <br>
+                <p class="blog-contenido">{{post.contenido}}</p>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+    <script>
+        var abreviado = document.querySelector('.blog-contenido');
+        function ellipsis_box(elemento, max_chars) {
+            limite_text = $(elemento).text();
+            if (limite_text.length > max_chars) {
+                limite = limite_text.substr(0, max_chars) + " ...";
+                $(elemento).text(limite);
+            }
+        }
+        ellipsis_box(abreviado, 150);
+    </script>
+</div>
+
+{% endblock %}

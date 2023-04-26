@@ -1,5 +1,5 @@
 (function () {
-
+    
     var blur = document.querySelector('.blur');
     var popup = document.querySelector('.form-popup');
     var openForm = document.querySelector('.nav-link.link3');
@@ -9,8 +9,25 @@
     var emailInput = form.querySelector('input[name="email"]');
     var btnSubmit = form.querySelector('.btn-submit');
 
+    /*Barra Navegacion*/
+    const toggle = document.querySelector('.toggle');
+    const menu = document.querySelector('.menu');
 
-    openForm.addEventListener('click',function() {
+    function toggleMenu() {
+        if (menu.classList.contains('active')) {
+            menu.classList.remove('active');
+            toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+        } else {
+            menu.classList.add('active');
+            toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
+        }
+    }
+
+
+    toggle.addEventListener('click', toggleMenu, false);
+
+
+    openForm.addEventListener('click', function () {
         console.log('La función openFormPopup() se está llamando correctamente');
         blur.style.display = 'block';
         popup.classList.add('show');
@@ -42,7 +59,6 @@
         }
     });
 
-
-
+    
 
 })();

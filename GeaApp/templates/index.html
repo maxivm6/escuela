@@ -5,15 +5,16 @@
 {% block content %}
 
 <section id="section-portada" class="row text-center">
-    <img id="portada" src="static\GeaApp\img\portada_ejemplo.jpg" alt="Portada" class="img-fluid"
-        style="max-width: 100%;">
-    <div style="position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%);">
-        <h1 class="letra-informal"
-            style="color: #f7eded; text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75); font-size: 7vw;">Vení y anotá a la
-            bendi YA!</h1>
+    <img id="portada" src="static\GeaApp\img\portada_ejemplo.jpg" alt="Portada" class="img">
+    <div style="position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%);">
+        <p class="letra-informal"
+            style="font-size: 4.4em; color: #ffffff; text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);">
+            Veni y anota a la bendi <span style="color: #95c416;">Y</span><span style="color: #1b5a8a;">A</span><span
+                style="color: #de672a;">!</span>
+        </p>
     </div>
 </section>
-
+<!--
 
 
 
@@ -39,86 +40,48 @@
 
 </section>
 
-<section class="row justify-content-center" id="my-section" style="margin: auto;">
+<section class="row" id="my-section">
+
+    {% for post in posts %}
+
     <div id="cuadros" class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-10 col-sx-12 text-center">
-        <div style="height: 55%; margin: 1em;">
-            <img src="static\GeaApp\img\nene1.jpg" alt="Foto" class="img-fluid tamaño-imagen">
+        <div style="margin: 1em;">
+            <img src="{{post.imagen.url}}" alt="Foto" class="img-fluid tamaño-imagen">
         </div>
-        <div style="height: 30%; margin: 1em; text-align: justify;">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur possimus in eum iusto quod ab, optio
-                at velit voluptatem temporibus alias unde cumque error quibusdam provident consequatur, distinctio
-                fugiat deleniti.</p>
+        <div style="height: auto; margin: 1em; text-align: justify;">
+            <p>{{post.contenido}}</p>
         </div>
         <div>
             <button style="height: 15%" type="button" class="btn btn-mi-estilo mt-2">Leer Más</button>
         </div>
     </div>
-    <div id="cuadros2" class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-10 col-sx-12 text-center">
-        <div style="height: 55%; margin: 1em;">
-            <img src="static\GeaApp\img\consola.jpg" alt="Foto" class="img-fluid tamaño-imagen">
-        </div>
-        <div style="height: 30%; margin: 1em; text-align: justify;">
-            <p style="text-align-last: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                possimus in eum iusto quod ab, optio at velit voluptatem temporibus alias unde cumque error quibusdam
-                provident consequatur, distinctio fugiat deleniti.</p>
-        </div>
-        <div>
-            <button type="button" class="btn btn-mi-estilo mt-2">Leer Más</button>
-        </div>
-    </div>
-    <div id="cuadros3" class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-10 col-sx-12 text-center">
-        <div style="height: 55%; margin: 1em;">
-            <img src="static\GeaApp\img\plantita.jpg" alt="Foto" class="img-fluid tamaño-imagen">
-        </div>
-        <div style="height: 30%; margin: 1em; text-align: justify;">
-            <p style="text-align-last: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                possimus in eum iusto quod ab, optio at velit voluptatem temporibus alias unde cumque error quibusdam
-                provident consequatur, distinctio fugiat deleniti.</p>
-        </div>
-        <div>
-            <button type="button" class="btn btn-mi-estilo mt-2">Leer Más</button>
-        </div>
-    </div>
-    <div id="cuadros4" class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-10 col-sx-12 text-center">
-        <div style="height: 55%; margin: 1em;">
-            <img src="static\GeaApp\img\nene2.jpg" alt="Foto" class="img-fluid tamaño-imagen">
-        </div>
-        <div style="height: 30%; margin: 1em; text-align: justify;">
-            <p style="text-align-last: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                possimus in eum iusto quod ab, optio at velit voluptatem temporibus alias unde cumque error quibusdam
-                provident consequatur, distinctio fugiat deleniti.</p>
-        </div>
-        <div>
-            <button type="button" class="btn btn-mi-estilo mt-2">Leer Más</button>
-        </div>
-    </div>
 
+    {% endfor %}
 
 </section>
 
 <br>
 
 
-<section id="section-equipo" class="row justify-content-between mt-5"
-    style="background-color: #318025; color: antiquewhite;">
+<section id="section-equipo" class="row justify-content-between mt-5">
 
     <div id="prueba"
         class="col-xl-6 col-xxl-6 col-md-12 col-lg-6 col-sm-12 p-2 d-flex flex-column justify-content-start text-center">
         <div>
             <h3 class="letra-informal2"
-                style="margin-top: 0.7em;font-size: 55px; color: #dbd9d9; text-shadow: 1px 1px 4px rgba(17, 17, 17, 0.3);">
+                style="margin-top: 0.7em;color: #dbd9d9; text-shadow: 1px 1px 4px rgba(17, 17, 17, 0.3);">
                 Texto de algo mas</h3>
         </div>
         <div style="padding:2em;">
-            <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi nulla repellat tempore possimus in
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi nulla repellat tempore possimus in
                 aspernatur numquam nihil. Cumque a, doloribus distinctio amet ut corrupti neque reprehenderit quos alias
-                est asperiores.</h5>
-            <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi nulla repellat tempore possimus in
+                est asperiores.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi nulla repellat tempore possimus in
                 aspernatur numquam nihil. Cumque a, doloribus distinctio amet ut corrupti neque reprehenderit quos alias
-                est asperiores.</h5>
-            <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi nulla repellat tempore possimus in
+                est asperiores.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi nulla repellat tempore possimus in
                 aspernatur numquam nihil. Cumque a, doloribus distinctio amet ut corrupti neque reprehenderit quos alias
-                est asperiores.</h5>
+                est asperiores.</p>
         </div>
 
     </div>
@@ -129,63 +92,127 @@
 
 </section>
 
-<section id="section-patio" class="row justify-content-between" style="background-color: #d43e3e; color: antiquewhite;">
-    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 align-self-center p-0" style="height: 100%;">
-        <img class="imagen-principal" src="/static/GeaApp/img/ejemplo2.jpg" alt="Patio">
+<section>
+    <div id="section-patio" class="row justify-content-between">
+        <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12 d-flex flex-column p-0"
+            style="height: 100%;">
+            <img class="imagen-principal" src="/static/GeaApp/img/ejemplo2.jpg" alt="Patio">
+        </div>
+
+        <div class="col-xl-7 col-xxl-7 col-md-12 col-lg-7 d-flex flex-column justify-content-center"
+            style="text-align: center; padding-left: 0 1.5rem; padding-right: 2em;">
+            <h3 class="letra-informal2"
+                style="margin-top: 0.7em;margin-bottom: 0.5em; color: #dbd9d9; text-shadow: 1px 1px 4px rgba(17, 17, 17, 0.3);">
+                Texto de algo mas
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi nulla repellat tempore possimus in
+                aspernatur numquam nihil. Cumque a, doloribus distinctio amet ut corrupti neque reprehenderit quos alias
+                est
+                asperiores.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi nulla repellat tempore possimus in
+                aspernatur numquam nihil. Cumque a, doloribus distinctio amet ut corrupti neque reprehenderit quos alias
+                est
+                asperiores.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi nulla repellat tempore possimus in
+                aspernatur numquam nihil. Cumque a, doloribus distinctio amet ut corrupti neque reprehenderit quos alias
+                est
+                asperiores.</p>
+            <div id="boton-section">
+                <button type="button" class="btn btn-mi-estilo-hover" style="margin: auto;">Inscribite Ahora!</button>
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="col-xl-7 col-xxl-7 col-md-12 col-lg-7 d-flex flex-column justify-content-center" style="text-align: center; padding-left: 2em; padding-right: 2em;">
-        <h3 class="letra-informal2"
-            style="margin-top: 0.7em;font-size: 55px; margin-bottom: 0.5em; color: #dbd9d9; text-shadow: 1px 1px 4px rgba(17, 17, 17, 0.3);">
-            Texto de algo mas</h3>
-        <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi nulla repellat tempore possimus in
-            aspernatur numquam nihil. Cumque a, doloribus distinctio amet ut corrupti neque reprehenderit quos alias est
-            asperiores.</h5>
-        <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi nulla repellat tempore possimus in
-            aspernatur numquam nihil. Cumque a, doloribus distinctio amet ut corrupti neque reprehenderit quos alias est
-            asperiores.</h5>
-        <h5>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi nulla repellat tempore possimus in
-            aspernatur numquam nihil. Cumque a, doloribus distinctio amet ut corrupti neque reprehenderit quos alias est
-            asperiores.</h5>
-        <br>
-        <div style="margin: auto;">
-            <button type="button" class="btn btn-mi-estilo-hover">Inscribite Ahora!</button>
+</section>
+
+
+-->
+
+
+
+
+
+<ul class="boxes">
+    {% for post in posts %}
+
+    <li>
+        <div class="boxes__text-wrapper">
+            <div>
+                <img src="{{post.imagen.url}}" alt="Foto" style="width:100%; margin: auto;">
+                <div style="margin-top: 1em; width: 100%;">
+                    <p class="box-contenido" style="font-size: 13px;">{{post.contenido}}</p>
+                </div>
+            </div>
+            <div style="margin-top: 2em; text-align: center;">
+                <button style="height: 15%" type="button" class="btn btn-mi-estilo">Leer Más</button>
+            </div>
+        </div>
+    </li>
+
+    {% endfor %}
+</ul>
+<script>
+    var abreviado = document.querySelectorAll('.box-contenido');
+    function ellipsis_box(elemento, max_chars) {
+        limite_text = $(elemento).text();
+        if (limite_text.length > max_chars) {
+            limite = limite_text.substr(0, max_chars) + " ...";
+            $(elemento).text(limite);
+        }
+    }
+    ellipsis_box(abreviado, 130);
+</script>
+
+
+
+{% for seccion in secciones %}
+<section>
+    <div class="contenedor">
+        <div class="foto">
+            <img src="{{seccion.imagen.url}}" alt="imagen">
+        </div>
+        <div class="texto {% if forloop.last %}ultimo{% endif %}" style="background-color: {{seccion.color_fondo}};">
+            <h2>{{seccion.titulo}}</h2>
+            <p>{{seccion.contenido}}</p>
         </div>
     </div>
-
 </section>
+{% endfor %}
 
+<section>
 
-
-
-<section class="row justify-content-center text-center mt-lg-12"
-    style="background-color: rgb(12, 87, 117); color: white; ">
-
-    <div class="col-lg-12 text-center" style="margin-top: 4em;">
-        <h4 class="letra-informal2"
-            style="font-size: calc(2.5vw + 1rem); color: #dbd9d9; text-shadow: 2px 2px 7px rgba(17, 17, 17, 0.4);letter-spacing: 3px; height: 56px;">
-            Querés Contactarnos? </h4>
-        <h4 class="letra-informal"
-            style="padding-left: 21%;font-size: calc(1.8vw + 1rem); color: #ce8f3e; text-shadow: 2px 2px 6px rgba(17, 17, 17, 0.5); letter-spacing: 1px;">
-            Dejanos tu mensaje!</h4>
-    </div>
-
-
-    <div class="form-column" id="formulario">
-        <br><br>
-        <form action="#" method="post">
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="5" required maxlength="500"
-                style="resize: none; height: 250px;"></textarea>
-            <br><br>
-            <div class="button-wrapper">
-                <button type="submit" style="font-size: 16px; letter-spacing: 1px;">Enviar!</button>
+    
+        <div id="formulario" style="width: 100%;">
+            <div id="titulo-form" class="col-12 text-center" style="margin-top: 4em; width: 100%;">
+                <h4 class="letra-informal2"
+                    style="font-size: 3em; color: #dbd9d9; text-shadow: 2px 2px 7px rgba(17, 17, 17, 0.4);letter-spacing: 3px; margin-bottom: 0;">
+                    Querés Contactarnos? </h4>
+                <h4 class="letra-informal"
+                    style="padding-left: 9.5em;font-size: 2em; color: #ce8f3e; text-shadow: 2px 2px 6px rgba(17, 17, 17, 0.5); letter-spacing: 1px; margin-top: 0;">
+                    Dejanos tu mensaje!</h4>
             </div>
-        </form>
-        <br><br>
-    </div>
+
+
+            <div class="form-column" style="width: 97%;">
+                <br><br>
+                <form action="#" method="post">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="5" required maxlength="500"
+                        style="resize: none; height: 250px;"></textarea>
+                    <br><br>
+                    <div class="button-wrapper">
+                        <button type="submit" style="font-size: 16px; letter-spacing: 1px;">Enviar!</button>
+                    </div>
+                </form>
+                <br><br>
+            </div>
+        </div>
+    
 </section>
+
 
 
 {% endblock %}
