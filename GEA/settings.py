@@ -42,8 +42,6 @@ INSTALLED_APPS = [
     'colorfield',
     'fontawesomefree',
     'blog',
-    'mysqlclient',
-    'PyMySQL',
 ]
 
 MIDDLEWARE = [
