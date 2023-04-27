@@ -51,12 +51,30 @@ a {
 
 }
 
+
 #section-portada {
   height: 30em;
   position: relative;
 }
-#texto-portada{
-  font-size: 4em; 
+.portada{
+  display: flex;
+  width: 100%;
+  height: 30em;
+  object-fit: cover;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.portada img{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  object-fit: cover;  
+}
+#portada-texto{
+  padding-top: 1em;
+  font-size: 3.5em; 
   color: #ffffff; 
   text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
 }
@@ -519,7 +537,7 @@ nav {
     flex: 2;
     flex-grow: inherit;
     text-align: right;
-    margin-right: 40px;
+    margin-right: 20px;
     font-size: 30px;
   }
 
@@ -527,6 +545,7 @@ nav {
     flex: 1;
     flex-grow: 3;
     font-size: 1.3em;
+    margin-left: 0;
   }
 
   .item {
