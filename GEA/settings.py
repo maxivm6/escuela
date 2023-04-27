@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-yd0gsej)27qhu89h(!^5x^v+=xeg$^*x9n0ab8mofi#&orl9+6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'colorfield',
     'fontawesomefree',
     'blog',
+    'mysqlclient',
+    'PyMySQL',
 ]
 
 MIDDLEWARE = [
