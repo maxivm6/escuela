@@ -27,14 +27,13 @@
 </head>
 
 <body>
-
  
-  <header>
+  <header id="principio">
     <nav class="contenedor"> 
       <ul class="menu"> 
         <li class="logo">
           <a  class="logo" id="link-logo" href="{% url 'index' %}">
-            <img alt="Logo">
+            <img alt="Logo" title="Home">
           </a>
         </li>
         <li  class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li> 
@@ -56,7 +55,7 @@
     {% endblock %}
   
   </main>
-
+  
 <footer>
   <div class="foot">
     <div class="foot-item" style="padding: 0.5em 0 0 0;">
@@ -82,6 +81,10 @@
     </div>
     <div class="foot-item" style="font-size: 12px;"><p>© 2023 GEA - Escuela Generativa Ecológica</p></div>
   </div>
+  
+  <a href="#principio"><i id="flecha" class="fa-solid fa-circle-arrow-up" title="Ir Arriba"></i></a>
+  
+  
 </footer>
 
 
@@ -109,7 +112,24 @@
     </div>
   </div>
 
+  <script>
+    window.addEventListener('scroll', function() {
+  var scrollPosition = window.scrollY;
+  var documentHeight = document.documentElement.scrollHeight;
+  var windowHeight = window.innerHeight;
+  var triggerPosition = documentHeight / 2 - windowHeight / 2;
+  
+  if (scrollPosition >= triggerPosition) {
+    document.getElementById('flecha').style.display = 'inline';
+  } else {
+    document.getElementById('flecha').style.display = 'none';
+  }
+});
 
+  
+
+
+  </script>
 
 
   <script type="text/javascript" src="{% static 'GeaApp/js/script.js' %}"></script>

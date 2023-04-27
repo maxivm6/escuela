@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<div>
+
 
 
     {% for post in posts %}
@@ -22,8 +22,9 @@
         </div>
     </section>
     {% endfor %}
+
     <script>
-        var abreviado = document.querySelector('.blog-contenido');
+        var abreviado = document.querySelectorAll('.blog-contenido');
         function ellipsis_box(elemento, max_chars) {
             limite_text = $(elemento).text();
             if (limite_text.length > max_chars) {
@@ -33,6 +34,6 @@
         }
         ellipsis_box(abreviado, 150);
     </script>
-</div>
+
 
 {% endblock %}
