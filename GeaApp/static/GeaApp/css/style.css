@@ -459,6 +459,7 @@ a {
 .logo img {
   content: url("../img/logo_mobil_nombre.png");
   max-width: 4em;
+  width: 100%;
 }
 
 .toggle {
@@ -498,6 +499,12 @@ nav {
     align-items: center;
     flex-wrap: wrap;
   }
+  .logo img {
+    content: url("../img/logo_mobil_nombre.png");
+    height: auto;
+    max-width: 23%;
+    width: 100%;
+  }
 
   .menu {
     width: 100%;
@@ -514,7 +521,7 @@ nav {
   .logo {
     flex: 1;
     flex-grow: 3;
-    font-size: 50px;
+    font-size: 1.3em;
   }
 
   .item {
@@ -535,6 +542,7 @@ nav {
     content: url("../img/logo_mobil_nombre.png");
     height: auto;
     max-width: 23%;
+    width: 100%;
   }
 
   nav {
@@ -550,7 +558,7 @@ nav {
     flex: 1;
     text-align: center;
     padding-left: 4em;
-    font-size: 80px;
+    font-size: 1.3em;
   }
 
   .toggle {
