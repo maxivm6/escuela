@@ -448,7 +448,7 @@ a {
 }
 
 .logo {
-  font-size: 20px;
+  font-size: 1.5em;
   padding-left: 7.5px 15px 7.5px 0;
 }
 
@@ -514,6 +514,7 @@ nav {
   .logo {
     flex: 1;
     flex-grow: 3;
+    font-size: 1.3em;
   }
 
   .item {
@@ -549,6 +550,7 @@ nav {
     flex: 1;
     text-align: center;
     padding-left: 4em;
+    font-size: 1.3em;
   }
 
   .toggle {
