@@ -55,6 +55,11 @@ a {
   height: 30em;
   position: relative;
 }
+#texto-portada{
+  font-size: 4em; 
+  color: #ffffff; 
+  text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.75);
+}
 
 
 @media (max-width:991px) {
@@ -502,7 +507,7 @@ nav {
   .logo img {
     content: url("../img/logo_mobil_nombre.png");
     height: auto;
-    max-width: 27%;
+    max-width: 40%;
     width: 100%;
   }
 
@@ -541,7 +546,7 @@ nav {
   .logo img {
     content: url("../img/logo_mobil_nombre.png");
     height: auto;
-    max-width: 27%;
+    max-width: 40%;
     width: 100%;
   }
 
