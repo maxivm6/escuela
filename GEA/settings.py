@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'blog',
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://escuela-production-737b.up.railway.app/']
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
