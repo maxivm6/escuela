@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn GEA.wsgi --log-file -
+web: gunicorn GEA.wsgi --log-file -
