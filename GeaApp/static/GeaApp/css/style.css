@@ -365,6 +365,7 @@ a {
 .form-column input,
 .form-column textarea {
   width: 85%;
+  max-width: 425px;
   padding: 0.5em;
   margin-bottom: 1em;
 }
