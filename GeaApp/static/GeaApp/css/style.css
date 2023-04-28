@@ -817,7 +817,7 @@ nav {
   }
  
 }
-@media (min-width:700px)and(max-width: 968px){
+@media (max-width: 968px){
   #logo-foot{
     width: 25%;
     height: auto;
