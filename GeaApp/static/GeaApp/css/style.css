@@ -782,14 +782,14 @@ nav {
 }
 
 .foot-item ul {
-  padding: 0 0 0.5em 0;
+  padding: 0;
 }
 
 .foot-item a,
 img {
   text-decoration: none;
   width: 3%;
-  margin: 0 0.5em 0 0.5em;
+  margin: 0.5em 0.5em 0 0.5em;
 }
 
 .foot h4 {
@@ -812,7 +812,8 @@ img {
 @media (max-width:700px)
 {
   #logo-foot{
-    width: 40%;
+    width: 35%;
+    height: fit-content;
   }
   
 }
