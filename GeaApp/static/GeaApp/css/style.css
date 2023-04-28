@@ -790,6 +790,7 @@ nav {
   font-size: 0.9em;
   padding: 0;
 }
+@media (min-width:969px){
 #logo-foot{
   width: 10%; 
   height: fit-content; 
@@ -802,6 +803,7 @@ nav {
   margin: 0.5em 0.5em 0 0.5em;
   margin-top: 1em;
   margin-bottom: 1em;
+}
 }
 @media (min-width: 700px) and (max-width: 968px) {
   #logo-foot{
