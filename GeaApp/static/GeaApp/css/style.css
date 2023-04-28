@@ -715,7 +715,9 @@ nav {
   .contenedor {
     flex-direction: column;
   }
-
+  .foto{
+    order:1;
+  }
   .foto .texto {
     max-width: 100%;
   }
@@ -780,7 +782,7 @@ nav {
   font-size: 2.2em;
   margin: auto;
   padding: 0 0.7em 0 0.5em;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); 
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3); 
 }
 
 .foot h6 {
@@ -821,7 +823,7 @@ nav {
   margin: auto;
   padding: 0 0.7em 0 0.5em;
   letter-spacing: 3px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); 
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3); 
 }
 #form-subtitulo{
   padding-left: 9.5em;font-size: 2em; color: #ce8f3e; text-shadow: 1px 0 3px rgba(0, 0, 0, 0.5); letter-spacing: 1px; margin-top: 0;
