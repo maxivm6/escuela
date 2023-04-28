@@ -856,7 +856,8 @@ nav {
   }
   .form-column {
     width: 100%;
-}
+    justify-content: center;
+  }
 }
 
 
