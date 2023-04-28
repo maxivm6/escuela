@@ -812,8 +812,8 @@ img {
 @media (max-width:700px)
 {
   #logo-foot{
-    width: 35%;
-    height: fit-content;
+    width: 50%;
+    height: auto;
   }
   
 }
