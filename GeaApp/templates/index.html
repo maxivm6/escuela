@@ -61,13 +61,14 @@
         </div>
         <div class="texto {% if forloop.last %}ultimo{% endif %}" style="background-color: {{seccion.color_fondo}};">
             <h2>{{seccion.titulo}}</h2>
-            <p>{{seccion.contenido}}</p>
-            <br><br><br><br><br>
+            <p style="text-align: center;">{{seccion.contenido}}</p>
+            <br>
             {% if forloop.last %}
             <div id="boton-section">
                 <button type="button" class="btn btn-mi-estilo-hover" style="margin: auto;">Inscribite Ahora!</button>
             </div>
             {% endif %}
+            <br>
         </div>
     </div>
 </section>
