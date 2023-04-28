@@ -796,12 +796,25 @@ img {
   font-size: 2.5em;
   padding-bottom: 0.3em;
   margin: auto;
+  padding: 0 0.5em 0 0.5em;
   text-shadow: 1px 2px 3px rgba(17, 17, 17, 0.5);
 }
 
 .foot h6 {
   font-size: 0.9em;
   padding: 0;
+}
+#logo-foot{
+  width: 10%; 
+  height: fit-content; 
+  margin: 1em 0 1em 0;
+}
+@media (max-width:700px)
+{
+  #logo-foot{
+    width: 40%;
+  }
+  
 }
 
 /*FORMULARIO*/
