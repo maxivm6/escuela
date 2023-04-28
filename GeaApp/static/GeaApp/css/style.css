@@ -854,7 +854,11 @@ nav {
     letter-spacing: 1px;
     margin-top: 0;
   }
+  .form-column {
+    width: 100%;
 }
+}
+
 
 
 /*BLOG*/
