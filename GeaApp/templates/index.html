@@ -9,7 +9,8 @@
 <section id="section-portada">
     <div class="portada">
         <img src="static\GeaApp\img\portada_ejemplo.jpg" alt="Portada" class="img">
-        <div style="position: absolute; top: 67%; left: 50%; transform: translate(-50%, -50%); width: 100%; text-align: center;">
+        <div
+            style="position: absolute; top: 67%; left: 50%; transform: translate(-50%, -50%); width: 100%; text-align: center;">
             <p id='portada-texto' class="letra-informal">
                 Veni y anota la bendi <span style="color: #95c416;">Y</span><span style="color: #1b5a8a;">A</span><span
                     style="color: #de672a;">!</span>
@@ -68,38 +69,40 @@
             </div>
             {% endif %}
         </div>
-    </div>   
+    </div>
 </section>
 {% endfor %}
 
 <section>
 
-    
-        <div id="formulario" style="width: 100%;">
-            <div id="titulo-form" class="col-12 text-center" style="margin-top: 4em; width: 100%;">
-                <h4 class="letra-informal2" id="form-titulo">
-                    Querés Contactarnos? </h4>
-                <h4 class="letra-informal" id="form-subtitulo">
-                    Dejanos tu mensaje!</h4>
-            </div>
+
+    <div id="formulario" style="width: 100%;">
+        <div id="titulo-form" class="col-12 text-center" style="margin-top: 4em; width: 100%;">
+            <h4 class="letra-informal2" id="form-titulo">
+                Querés Contactarnos? </h4>
+            <h4 class="letra-informal" id="form-subtitulo">
+                Dejanos tu mensaje!</h4>
+        </div>
 
 
-            <div class="form-column" style="width: 96%;">
-                <br><br>
-                <form action="#" method="post">
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                    <input type="email" id="email" name="email" placeholder="Email" required>
-                    <input type="text" id="mensaje" name="mensaje" placeholder="Mensaje" rows="5" required maxlength="500"
-                        style="resize: none; height: 250px;"></input>
-                    <br><br>
+        <div class="form-column" style="width: 96%;">
+            <br><br>
+            <form action="#" method="post">
+                <div style="width: 100%; display: flex; align-items: center; flex-direction: column;">
+                    <input class="form-entradas" type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    <input class="form-entradas" type="email" id="email" name="email" placeholder="Email" required>
+                    <textarea class="form-entradas" id="mensaje" name="mensaje" placeholder="Mensaje" rows="5" required maxlength="500"
+                        style="resize: none; height: 250px;"></textarea>
+                    <br>
                     <div class="button-wrapper">
                         <button type="submit" style="font-size: 16px; letter-spacing: 1px;">Enviar!</button>
                     </div>
-                </form>
-                <br><br>
-            </div>
+                </div>
+            </form>
+            <br><br><br>
         </div>
-    
+    </div>
+
 </section>
 
 
