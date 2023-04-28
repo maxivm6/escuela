@@ -780,6 +780,7 @@ nav {
   font-size: 2.2em;
   margin: auto;
   padding: 0 0.7em 0 0.5em;
+  text-shadow: 1px 0 3px rgba(0, 0, 0, 0.5);
 }
 
 .foot h6 {
@@ -819,10 +820,11 @@ nav {
   font-size: 3em;
   margin: auto;
   padding: 0 0.7em 0 0.5em;
-  letter-spacing: 3px; 
+  letter-spacing: 3px;
+  text-shadow: 1px 0 3px rgba(0, 0, 0, 0.5); 
 }
 #form-subtitulo{
-  padding-left: 9.5em;font-size: 2em; color: #ce8f3e; text-shadow: 2px 2px 6px rgba(17, 17, 17, 0.5); letter-spacing: 1px; margin-top: 0;
+  padding-left: 9.5em;font-size: 2em; color: #ce8f3e; text-shadow: 1px 0 3px rgba(0, 0, 0, 0.5); letter-spacing: 1px; margin-top: 0;
 }
 
 #formulario {
