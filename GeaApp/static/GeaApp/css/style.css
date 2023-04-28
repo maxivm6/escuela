@@ -365,7 +365,8 @@ a {
 .form-column input,
 .form-column textarea {
   width: 85%;
-  
+  padding: 0.5em;
+  margin-bottom: 1em;
 }
 
 .form-column button {
@@ -410,6 +411,13 @@ a {
 
   .form-wrapper {
     max-width: 100%;
+  }
+
+  .form-column input,
+  .form-column textarea {
+
+    max-width: 98%;
+    width: 100%;
   }
 
   .button-wrapper {
