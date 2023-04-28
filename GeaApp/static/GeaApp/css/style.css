@@ -201,12 +201,7 @@ a {
   order: 2;
 }
 
-.redes-ico {
-  width: 60px;
-  height: 60px;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
+
 
 #boton-section {
   margin: auto;
@@ -221,11 +216,7 @@ a {
     font-size: 20px;
   }
 
-  .redes-ico {
-    width: 5em;
-    height: 5em;
-    margin: 1em;
-  }
+  
 
   #caja2 {
     order: 1;
@@ -785,18 +776,10 @@ nav {
   padding: 0;
 }
 
-.foot-item a,
-img {
-  text-decoration: none;
-  width: 3%;
-  margin: 0.5em 0.5em 0 0.5em;
-}
-
 .foot h4 {
-  font-size: 2.5em;
-  padding-bottom: 0.3em;
+  font-size: 2.2em;
   margin: auto;
-  padding: 0 0.5em 0 0.5em;
+  padding: 0 0.7em 0 0.5em;
   text-shadow: 1px 2px 3px rgba(17, 17, 17, 0.5);
 }
 
@@ -809,12 +792,26 @@ img {
   height: fit-content; 
   margin: 1em 0 1em 0;
 }
+.redes-ico {
+  text-decoration: none;
+  width: 3%;
+  height: auto;
+  margin: 0.5em 0.5em 0 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 @media (max-width:700px)
 {
   #logo-foot{
     width: 40%;
     height: auto;
     margin: 1em 0 1em 0;
+  }
+  .redes-ico {
+    width: 13%;
+    height: auto;
+    margin: 1em;
+    
   }
   
 }
