@@ -44,7 +44,7 @@ a {
 
 #section-portada {
   height: auto;
-  margin: 1em 0 8em 0;
+  margin: 0 0 8em 0;
   padding: 0;
   position: relative;
 }
@@ -179,29 +179,6 @@ a {
   transition: 0.25s;
 }
 
-#section-equipo {
-  background-color: #318025;
-  color: antiquewhite;
-  height: 40em;
-}
-
-#section-patio {
-  background-color: #d43e3e;
-  color: antiquewhite;
-  height: 30em;
-  position: relative;
-}
-
-#prueba {
-  order: 1;
-
-}
-
-#caja2 {
-  order: 2;
-}
-
-
 
 #boton-section {
   margin: auto;
@@ -211,11 +188,6 @@ a {
   #boton-section {
     margin-bottom: 1em;
   }
-
-  .navbar-nav .nav-link {
-    font-size: 20px;
-  }
-
   
 
   #caja2 {
@@ -249,11 +221,6 @@ a {
 
   .mb-4 {
     margin: 1em;
-  }
-
-  #mapa {
-    margin: auto;
-    margin-right: 0.9em;
   }
 
   html {
@@ -443,13 +410,16 @@ a {
 
 /*Barra Navegacion*/
 
-
 nav {
   padding: 0 15px;
+  height: auto;
 }
 
 ul {
   list-style-type: none;
+}
+.menu{
+  margin-bottom: 0;
 }
 
 a {
@@ -491,7 +461,8 @@ nav {
 
 .menu li a {
   display: block;
-  padding: 15px 5px;
+  padding: 9px 5px;
+  margin: 0.5em 0 0.5em 0;
 }
 
 .item {
@@ -500,6 +471,7 @@ nav {
   text-align: center;
   display: none;
 }
+
 
 /*Menu Celular*/
 @media screen and (max-width: 700px) {
@@ -548,6 +520,7 @@ nav {
   }
 }
 
+
 /*Menu Tablet*/
 @media all and (min-width:700px) {
   .logo img {
@@ -559,11 +532,6 @@ nav {
 
   nav {
     background: #252525;
-  }
-
-  .menu {
-    justify-content: center;
-    width: 100%;
   }
 
   .logo {
