@@ -6,14 +6,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GEA - Escuela Generativa Ecológica Ambiental</title>
-  
+
   <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
-  
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'GeaApp/css/style.css' %}">
   <link rel="stylesheet" href="{% static 'GeaApp/css/fonts.css' %}">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
@@ -25,65 +25,89 @@
 </head>
 
 <body>
- 
+
   <header id="principio">
-    <nav class="contenedor"> 
-      <ul class="menu"> 
+    <nav class="contenedor">
+      <ul class="menu">
         <li class="logo">
-          <a  class="logo" id="link-logo" href="{% url 'index' %}">
+          <a class="logo" id="link-logo" href="{% url 'index' %}">
             <img alt="Logo" title="Home">
           </a>
         </li>
-        <li  class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li> 
-        <li  class="item"><a class="item item1" href="{% url 'index' %}">Home</a></li> 
-        <li  class="item"><a class="item item2" href="#">Sobre Nosotros</a></li> 
-        <li  class="item"><a class="item item3" href="#">La Radio</a></li> 
-        <li  class="item"><a class="item item4" href="{% url 'blog' %}">Blog</a></li> 
-        <li  class="item"><a class="item item5" href="#formulario">Contacto</a></li>   
-      </ul> 
-    </nav>   
+        <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+        <li class="item"><a class="item item1" href="{% url 'index' %}">Home</a></li>
+        <li class="item"><a id="about" class="item item2" href="#">Sobre Nosotros</a></li>
+        <li class="item"><a id="radio" class="item item3" href="#">La Radio</a></li>
+        <li class="item"><a id="blog" class="item item4" href="{% url 'blog' %}">Blog</a></li>
+        <li class="item"><a id="contacto" class="item item5" href="#formulario">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
+  <script>
+    const nombreUrl = "{{ nombre_url }}";
+
+    const enlacesMenu = document.querySelectorAll('nav a');
+
+    enlacesMenu.forEach(enlace => {
+      if (enlace.id === nombreUrl) {
+        enlace.classList.add('active');
+      } else {
+        enlace.classList.remove('active');
+      }
+    });
+
+
+
+  </script>
 
 
   <main>
-  
+
     {% block content %}
 
     {% endblock %}
-  
+
   </main>
-  
-<footer>
-  <div class="foot">
-    <div class="foot-item" style="padding: 0.5em 0 0 0;">
-      <h4 class="letra-informal2">O por nuestras redes</h4>
-    </div>
-    <div class="foot-item" style="background-color: rgb(1, 73, 102);">
-      <ul>
-        <a href="https://www.facebook.com/Escuelagenerativa/" target="_blank"><img class="redes-ico" src="{% static 'GeaApp/img/redes/fb.png' %}" alt="Facebook"></a>
-        <a href="https://www.instagram.com/escuelagenerativagea/?hl=es" target="_blank"><img class="redes-ico" src="{% static 'GeaApp/img/redes/ig.png' %}" alt="Instagram"></a>
-        <a href="https://www.youtube.com/@VozEnGEA" target="_blank"><img class="redes-ico" src="{% static 'GeaApp/img/redes/youtube.png' %}" alt="Twitter"></a>
-      </ul>
-    </div>
-    
-    <div class="foot-item" style="margin-bottom: 1em;">
+
+  <footer>
+    <div class="foot">
+      <div class="foot-item" style="padding: 0.5em 0 0 0;">
+        <h4 class="letra-informal2">O por nuestras redes</h4>
+      </div>
+      <div class="foot-item" style="background-color: rgb(1, 73, 102);">
+        <ul>
+          <a href="https://www.facebook.com/Escuelagenerativa/" target="_blank"><img class="redes-ico"
+              src="{% static 'GeaApp/img/redes/fb.png' %}" alt="Facebook"></a>
+          <a href="https://www.instagram.com/escuelagenerativagea/?hl=es" target="_blank"><img class="redes-ico"
+              src="{% static 'GeaApp/img/redes/ig.png' %}" alt="Instagram"></a>
+          <a href="https://www.youtube.com/@VozEnGEA" target="_blank"><img class="redes-ico"
+              src="{% static 'GeaApp/img/redes/youtube.png' %}" alt="Twitter"></a>
+        </ul>
+      </div>
+
+      <div class="foot-item" style="margin-bottom: 1em;">
         <img id="logo-foot" src="{% static 'GeaApp/img/logo.png' %}" alt="Logo">
         <h6>Escuela Generativa Ecológica Ambiental</h6>
         <h6>Tel: 02657-353612</h6>
         <h6>Maipú 1712</h6>
         <h6>escuelagenerativagea@gmail.com</h6>
+      </div>
+      <div class="foot-item">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1660.0059384893405!2d-65.42780716761641!3d-33.68275663926707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d16bb724907b73%3A0x947adcc9bda68792!2sEscuela%20Generativa%20GEA!5e0!3m2!1ses-419!2sar!4v1680103712704!5m2!1ses-419!2sar"
+          width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="foot-item" style="font-size: 12px;">
+        <p>© 2023 GEA - Escuela Generativa Ecológica</p>
+      </div>
     </div>
-    <div class="foot-item">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1660.0059384893405!2d-65.42780716761641!3d-33.68275663926707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d16bb724907b73%3A0x947adcc9bda68792!2sEscuela%20Generativa%20GEA!5e0!3m2!1ses-419!2sar!4v1680103712704!5m2!1ses-419!2sar" width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div class="foot-item" style="font-size: 12px;"><p>© 2023 GEA - Escuela Generativa Ecológica</p></div>
-  </div>
-  
-  <a href="#principio"><i id="flecha" class="fa-solid fa-circle-arrow-up" title="Ir Arriba"></i></a>
-  
-  
-</footer>
+
+    <a href="#principio"><i id="flecha" class="fa-solid fa-circle-arrow-up" title="Ir Arriba"></i></a>
+
+
+  </footer>
 
 
   <div class="blur"></div>
@@ -91,7 +115,7 @@
     <span class="close">&times;</span>
     <div class="form-wrapper">
       <div class="image-column">
-        <img src="{% static 'GeaApp/img/logo.png' %}" alt="Imagen de ejemplo"> 
+        <img src="{% static 'GeaApp/img/logo.png' %}" alt="Imagen de ejemplo">
       </div>
       <div class="form-column">
         <br><br>
@@ -111,18 +135,18 @@
   </div>
 
   <script>
-    window.addEventListener('scroll', function() {
-  var scrollPosition = window.scrollY;
-  var documentHeight = document.documentElement.scrollHeight;
-  var windowHeight = window.innerHeight;
-  var triggerPosition = documentHeight / 2 - windowHeight / 2;
-  
-  if (scrollPosition >= triggerPosition) {
-    document.getElementById('flecha').style.display = 'inline';
-  } else {
-    document.getElementById('flecha').style.display = 'none';
-  }
-});
+    window.addEventListener('scroll', function () {
+      var scrollPosition = window.scrollY;
+      var documentHeight = document.documentElement.scrollHeight;
+      var windowHeight = window.innerHeight;
+      var triggerPosition = documentHeight / 2 - windowHeight / 2;
+
+      if (scrollPosition >= triggerPosition) {
+        document.getElementById('flecha').style.display = 'inline';
+      } else {
+        document.getElementById('flecha').style.display = 'none';
+      }
+    });
   </script>
 
 
@@ -133,9 +157,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
     integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
     crossorigin="anonymous"></script>
-   
+
 </body>
 
 </html>
-
-                    

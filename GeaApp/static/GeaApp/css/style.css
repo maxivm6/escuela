@@ -623,7 +623,7 @@ nav {
   .item .item1::before {
     background-color: #65FD4C;
   }
-
+   
   .item .item2::before {
     background-color: #FFA03E;
   }
@@ -638,6 +638,10 @@ nav {
 
   .item .item5::before {
     background-color: #8b8a8a;
+  }
+  .active{
+    color: #ff7d4a;
+    font-weight: 700;
   }
 }
 

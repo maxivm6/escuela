@@ -13,8 +13,10 @@
             <div class="blog-imagen"><img src="{{post.imagen.url}}" alt="imagen"></div>
             <div class="blog-texto">
                 <p class="blog-fecha">{{post.created}}</p>
-                <a href="">
-                    <h4>{{post.titulo}}</h4>
+                <a href="{% url 'noticia' post.id %}">
+                    <h4>
+                        {{post.titulo}}  
+                    </h4>
                 </a>
                 <br>
                 <p class="blog-contenido">{{post.contenido}}</p>
